@@ -6,6 +6,12 @@ The Japanese Language Learning School seeks to extend their language offerings a
 ## System Overview
 The GenAI Language Learning Platform is designed to facilitate language acquisition through AI-powered study activities and interactive learning experiences. The system leverages a core vocabulary database, retrieval-augmented generation (RAG), and large language models to provide personalized language learning activities.
 
+## Data Strategy
+- System must purchase and supply copyrighted language learning materials
+- All materials must be properly licensed and stored in a secure database
+- Content usage must comply with educational fair use guidelines
+- Purchased materials must be properly attributed when used in learning activities
+
 ## Infrastructure Requirements
 - System must operate on self-hosted infrastructure with an investment budget of 10-15K
 - Infrastructure must support 300 active students located within Nagasaki city
@@ -40,7 +46,9 @@ The GenAI Language Learning Platform is designed to facilitate language acquisit
 - RAG implementation must be optimized to run efficiently on the specified hardware
 
 ### 4. LLM Integration
-- System must integrate with a 7B parameter LLM that can run on the specified hardware
+- System must use IBM Granite as the primary LLM ([IBM Granite on Hugging Face](https://huggingface.co/IBM/granite-7b-base))
+- IBM Granite must be selected for its open-source nature and traceable training data
+- Model selection ensures transparency and helps avoid copyright issues
 - Input Guardrail must validate and sanitize all user inputs before processing
 - Output Guardrail must ensure all LLM responses are appropriate, accurate, and educational
 - LLM must be capable of multilingual support to facilitate expansion to other languages
@@ -57,6 +65,7 @@ The GenAI Language Learning Platform is designed to facilitate language acquisit
 - Vector Database must store embeddings for efficient semantic search
 - System must implement efficient database querying for real-time interactions
 - Student progress data must be securely stored and synchronized with the main learning record store
+- Properly licensed teaching materials must be stored and indexed for retrieval
 
 ### 7. Internet Connectivity
 - System must be able to access internet resources when needed
@@ -86,15 +95,16 @@ The GenAI Language Learning Platform is designed to facilitate language acquisit
 1. Core database and word group management
 2. RAG implementation with vector database integration
 3. Basic study activities (Sentence Constructor, Flashcards)
-4. LLM integration with guardrails
+4. IBM Granite integration with guardrails
 5. Advanced study activities (Visual Novel, Text Adventure)
 6. Teacher management features
 7. Performance optimization and scaling
 8. Multi-language support framework
 
 ## Technical Dependencies
-- Open-source 7B parameter language model compatible with available hardware
+- IBM Granite open-source language model (7B parameter version) - https://huggingface.co/ibm-granite
 - Vector database technology optimized for self-hosting
 - Secure internet access with appropriate bandwidth
 - User authentication system that integrates with existing portal
 - Educational content management system
+- Licensed language learning materials database
